@@ -53,7 +53,7 @@ class AppointmentController {
     });
 
     if (!providerIsValid) {
-      return res.json({ error: 'Invalid User/Provider' });
+      return res.status(401).json({ error: 'Invalid User/Provider' });
     }
 
     const hourStart = startOfHour(parseISO(date));

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "dev:debug": "nodemon --inspect src/server.js",
-    "plsql:start": "docker start c9806b513a30",
+    "postgres:start": "docker start c9806b513a30",
     "mongo:start": "docker start 3b74adf8714e"
   },
   "dependencies": {
