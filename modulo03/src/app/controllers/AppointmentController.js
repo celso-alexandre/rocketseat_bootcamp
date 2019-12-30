@@ -62,7 +62,7 @@ class AppointmentController {
     const hourStart = startOfHour(parseISO(date));
 
     if (isBefore(hourStart, new Date())) {
-      return res.status(400).json({ error: 'Past dates are now permitted' });
+      return res.status(400).json({ error: 'Past dates are not permitted' });
     }
 
     const checkAvailability = await Appointment.findOne({
